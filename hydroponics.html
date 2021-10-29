@@ -47,14 +47,176 @@
 								<div class="inner">
 									<header class="major">
 										<h1>Hydroponics Project</h1>
-										<p>ME 391 (Independent Study): August 2020 - December 2020</p>
+										<p>ME 391 (Independent Study): August 2020 - December 2020, September 2021 - Current</p>
 									</header>
-									<blockquote><b>The goal of this project was to develop a semi autonomous hydroponic system to grow leafy greens such as lettuce.</b></blockquote>
-									<span class="image main"><img src="images/pic11.jpg" alt="" /></span>
-									<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fergiat. Pellentesque in mi eu massa lacinia malesuada et a elit. Donec urna ex, lacinia in purus ac, pretium pulvinar mauris. Curabitur sapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit.</p>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus, vel sed vehicula.</p>
-									<p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fersapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique lorem ipsum dolor.</p>
+									<blockquote><b>The goal of this project was to develop an autonomous hydroponic system to grow leafy greens such as lettuce.</b></blockquote>
+									
+									<!-- Box -->
+									<div class="box">
+										<h3>Problem Statement</h3>
+										<p>I wanted to grow plants over the summer, so I looked into hydroponic machines online. When searching for a system to use, I found that most systems cost upward of $100, and I believed that I could make one of equal functionality on my own for less.</p>
+									</div>
+									
+									<h3>Design Process</h3>
+									<p>To begin this project, I first wanted to dismantle an existing hydroponic system to determine the components necessary within their design. The system that I chose to analyse was the <a href = "https://www.amazon.com/AeroGarden-Black-Sprout-2020-Model/dp/B08GV19MKH?ref_=ast_sto_dp&th=1">AeroGarden White Sprout</a> due to its simple functionality and cost of $99.95. Upon completing the teardown I then determined the materials that were critical to function, and sourced alternatives to use in my design with the goal of staying underneath the price point.</p>
+									<div class="box alt">
+                                        <div class="row gtr-uniform">
+                                            <div class="col-4"; style="width:image width px; font-size:80%; text-align:center;"><span class="image fit"><img src="photos/Aerogrow.JPG" alt="" style="padding-bottom:0.5em;"/><i>Product Image</i></span></div>
+											<div class="col-4"; style="width:image width px; font-size:80%; text-align:center;"><span class="image fit"><img src="photos/Teardown.jpg" alt="" style="padding-bottom:0.5em;"/><i>Teardown of AeroGrow System</i></span></div>
+                                            <div class="col-4"; style="width:image width px; font-size:80%; text-align:center;"><span class="image fit"><img src="photos/AerogrowPlants.jpg" alt="" style="padding-bottom:0.5em;"/><i>Aerogrow in Function</i></span></div>
+                                        </div>
+                                    </div>
+									<div class="row">
+										<div class="col-4 col-12-small">
+											<h4>LED Selection</h4>
+											<p>To determine the optimal LED selection, I did research online to understand the ideal light spectrum for lettuce plants to grow.</p>
+											<p>I decided upon using a 1:1:1 ratio of Red (650nm), Green (550nm), and Royal Blue (450nm) light while also incorporating smaller quantities of LED's that reached the IR (730nm) and UV (365nm) spectrum as well.</p>
+											<p>These wavelenghts were selected because they covered the majority of the ideal wavelengths of light plants need to grow, while also not having detrimental side effects on the coloration or quality of the plant.</p>
+										</div>
+										<div class="col-4 col-12-small">
+											<h4>Pump Selection</h4>
+											<p>When selecting a pump, I needed something that would be strong enough to move around water to minimize algeal growth, while also not being too strong to the point where it would spill water outside of the water tank.</p>
+											<p>The cheapest pumps I sourced were 12V pumps, and pumps with an adjustable power were preferred to pumps with one power setting so that the movement of the water could have more control. Eventually a pump was sourced from Amazon which hit all of the criteria and was of a low cost, and the pump had a wire attachement so that it could be directly connected to an Arduino circuit.</p>
+											
+										</div>
+										<div class="col-4 col-12-small">
+											<h4>Growth Medium Selection</h4>
+											<p>For the growth medium, I wanted to select a material that was not only renewably sourced, but also a medium with the potential of being reused after a plant has been harvested.</p>
+											<p>These design requirements led me to discarding the popular growth medium rockwool, because although it is very cheap and efficient at growing plants it is neither environmentally friendly nor is it easily resuable. I finally settled upon utilizing a mixture of coconut coir and clay pebbles as a growth medium as this combination is popular in many hydroponic designs, and allows for the clay pebbles to be reused once the plant reaches maturity.</p>
+											
+										</div>
+									</div>
+									<hr />
+									<h3>CAD Design & Assembly</h3>
+										<p>I designed the parts on solidworks so that they could work in conjunction with the the components which I ordered online. This resulted in me designing five individual components on Solidworks shown below.</p>
+										<div class="box alt">
+											<div class="row gtr-uniform">
+												<div class="col-2"; style="width:image width px; font-size:80%; text-align:center;"><span class="image fit"><img src="photos/ME391/WaterTank.JPG" alt="" style="padding-bottom:0.5em;"/><i>Tank Base</i></span></div>
+												<div class="col-2"; style="width:image width px; font-size:80%; text-align:center;"><span class="image fit"><img src="photos/ME391/TankLid.JPG" alt="" style="padding-bottom:0.5em;"/><i>Tank Lid</i></span></div>
+												<div class="col-2"; style="width:image width px; font-size:80%; text-align:center;"><span class="image fit"><img src="photos/ME391/Plant Cup.JPG" alt="" style="padding-bottom:0.5em;"/><i>Plant Cup</i></span></div>
+												<div class="col-2"; style="width:image width px; font-size:80%; text-align:center;"><span class="image fit"><img src="photos/ME391/Connector.JPG" alt="" style="padding-bottom:0.5em;"/><i>Connector Piece</i></span></div>
+												<div class="col-3"; style="width:image width px; font-size:80%; text-align:center;"><span class="image fit"><img src="photos/ME391/HeatsinkHolder.JPG" alt="" style="padding-bottom:0.5em;"/><i>Heatsink Holder</i></span></div>
+											</div>
+										</div>
+										<div style="width:image width px; font-size:80%; text-align:center;"><span class="image right"><img src="photos/ME391/AssemblySolidworks.JPG" alt="" style="padding-bottom:0.5em;"/><i>Completed Assembly Drawing</i></span></div>
+										<p>The entirety of the design is based around the heatsink, as it limited the area of light which I could shine upon the plants, thus limiting the area which plants could effectively grow. The heatsink holder, tank lid, and water tank were all designed aroung the dimensions of the heatsink. I designed the plant cups to be long and narrow, so that it would be easier for the roots to reach the moisturized environment of the water tank.</p>
+										<p>Once designed, I then made an assembly of the system on solidworks so that I could confirm all the components would fit together. Once confirmed, I then ordered all the components I needed and printed out the parts which I designed.</p>
+										<p>To assemble the system, I had toleranced my design so that the majority of my printed components had a slight interference fit aside from the plant cups to the tank lid and the tank lid to the water tank due to their need to be removed upon plant harvest.</p>
+										
+										<hr />																										
+									<!-- Table -->
+									
+									<h3>Purchased Materials</h3>
+									<div class="table-wrapper">
+										<table>
+											<thead>
+												<tr>
+													<th>Part</th>
+													<th>Function</th>
+													<th>Cost</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td><a href = "https://www.amazon.com/Aluminum-Heatsink-Amplifier-Transistor-Semiconductor/dp/B07VMMJCLY/ref=sr_1_6?dchild=1&keywords=aluminum+heatsink&qid=1600468158&sr=8-6">Heatsink</a></td>
+													<td>Dissipates heat from the LEDs.</td>
+													<td>$10.99</td>
+												</tr>
+												<tr>
+													<td><a href="https://www.amazon.com/dp/B07PGRR8DL/ref=twister_B07PDPD6R1?_encoding=UTF8&th=1">2.4V Red LEDs (25ct)</a></td>
+													<td>Provides light for the plants.</td>
+													<td>$19.99</td>
+												</tr>
+												<tr>
+													<td><a href="https://www.amazon.com/LEDGroupBuy-Hyper-Far-Red-730nm/dp/B00OVCBEF8?ref_=ast_sto_dp">2.4V Infrared LEDs (3ct)</a></td>
+													<td>Provides light for the plants.</td>
+													<td>$10.89</td>
+												</tr>
+												<tr>
+													<td><a href="https://www.amazon.com/dp/B07PFM9CGT/ref=twister_B07PDPD6R1?_encoding=UTF8&th=1">2.4V Royal Blue LEDs (25ct)</a></td>
+													<td>Provides light for the plants.</td>
+													<td>$8.99</td>
+												</tr>
+												<tr>
+													<td><a href="https://www.amazon.com/dp/B07PGRRD5N/ref=twister_B07PDPD6R1?_encoding=UTF8&th=1">2.4V Green LEDs (25ct)</a></td>
+													<td>Provides light for the plants.</td>
+													<td>$9.79</td>
+												</tr>
+												<tr>
+													<td><a href="https://www.amazon.com/Led-World-365nm-Ultraviolet-Light/dp/B00OFR96XG/ref=sr_1_9?dchild=1&keywords=UV+365nm+light+chip&qid=1601330782&sr=8-9">2.4V UltraVoilet LEDs (10ct)</a></td>
+													<td>Provides light for the plants.</td>
+													<td>$13.50</td>
+												</tr>
+												<tr>
+													<td><a href="https://www.amazon.com/LEDGLE-Submersible-Ultra-Quiet-Dual-Purpose-Hydroponics/dp/B085NQ5VVJ/ref=sr_1_35?dchild=1&keywords=aquarium%2Bpump&qid=1603736959&sr=8-35&th=1">12V Pump</a></td>
+													<td>Aerates water within the tank.</td>
+													<td>$9.12</td>
+												</tr>
+												<tr>
+													<td><a href="https://www.amazon.com/Valefod-Efficiency-Voltage-Regulator-Converter/dp/B076H3XHXP/ref=sr_1_4?dchild=1&keywords=dc%2Bvoltage%2Bregulator%2Badjustable&qid=1635519444&sr=8-4&th=1">DC-DC Voltage Regulator (6ct)</a></td>
+													<td>Controls the voltage that reaches the LEDs</td>
+													<td>$10.98</td>
+												</tr>
+												<tr>
+													<td><a href="https://www.amazon.com/AROMA-TREES-Superior-Gardening-Bricks/dp/B07QNJ9TPD/ref=sr_1_1?dchild=1&keywords=AROMA+TREES+coco+coir&qid=1599867291&sr=8-1">Coconut Coir (5.6 lbs)</a></td>
+													<td>Provides initial seeding location for plant.</td>
+													<td>$29.99</td>
+												</tr>
+												<tr>
+													<td><a href="https://www.amazon.com/Organic-Expanded-Clay-Pebbles-Media/dp/B00GN9A6LK/ref=sr_1_2_sspa?dchild=1&keywords=clay%2Bpebbles&qid=1599867610&sr=8-2-spons&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUExMEs1VFJRSlBZSVNIJmVuY3J5cHRlZElkPUEwNjQwMzQzMU9NODJIWEVXQTRRUiZlbmNyeXB0ZWRBZElkPUEwMjczMTY3M1Q0M0pZTEtQT0ZTUyZ3aWRnZXROYW1lPXNwX2F0ZiZhY3Rpb249Y2xpY2tSZWRpcmVjdCZkb05vdExvZ0NsaWNrPXRydWU&th=1">Clay Pebbles (2 lbs)</a></td>
+													<td>Connects Coconut Coir to tank water.</td>
+													<td>$17.99</td>
+												</tr>
+											</tbody>
+											<tfoot>
+												<tr>
+													<td><b>Total Cost</b></td>
+													<td colspan="1"></td>
+													<td><b>$142.23</b></td>
+												</tr>
+											</tfoot>
+										</table>
+										<hr />
+									<h3>Nutrient Solution Testing</h3>
+									<p>Although plants can grow in normal water, I wanted to improve their growth by adding a nutrient soultion to my system. To test the nutrient solution which I obtained from my parents, I used its provided ratio in combintation with slightly more and less concentrated versions of it as displayed below. I did not have 15 systems at the time, so I instead grew lettuce seedlings within small cups to determine how much they benefited from their respective nutrient solutions. Within this trial I also wanted to understand how well the Coconut coir which I ordered retained water, so for each trial I planted one seedling within the coir instead of the nutrientless topsoil which the remaining seedlings were planted in.</p>
+									<div class="box alt">
+										<div class="row gtr-uniform">
+											<div class="col-2"; style="width:image width px; font-size:80%; text-align:center;"><span class="image fit"><img src="photos/ME391/AllTrials.jpg" alt="" style="padding-bottom:0.5em;"/><i>All Nutrient Solutions</i></span></div>
+											<div class="col-2"; style="width:image width px; font-size:80%; text-align:center;"><span class="image fit"><img src="photos/ME391/TrialA.jpg" alt="" style="padding-bottom:0.5em;"/><i>Trial A</i></span></div>
+											<div class="col-2"; style="width:image width px; font-size:80%; text-align:center;"><span class="image fit"><img src="photos/ME391/TrialB.jpg" alt="" style="padding-bottom:0.5em;"/><i>Trial B</i></span></div>
+											<div class="col-2"; style="width:image width px; font-size:80%; text-align:center;"><span class="image fit"><img src="photos/ME391/TrialC.jpg" alt="" style="padding-bottom:0.5em;"/><i>Trial C (Control)</i></span></div>
+											<div class="col-2"; style="width:image width px; font-size:80%; text-align:center;"><span class="image fit"><img src="photos/ME391/TrialD.jpg" alt="" style="padding-bottom:0.5em;"/><i>Trial D</i></span></div>
+											<div class="col-2"; style="width:image width px; font-size:80%; text-align:center;"><span class="image fit"><img src="photos/ME391/TrialE.jpg" alt="" style="padding-bottom:0.5em;"/><i>Trial E</i></span></div>
+										</div>
+									</div>
+									<p>Within about 3 weeks all of the seedlings died due to lack of sunlight (this was December in Alaska), however the plants that lasted the longest were in Trial B which was slightly more concentrated than the recommended nutrient solution ratio. In terms of water retention the coconut coir perfromed noticably better than the topsoil, and the plants within the coir lasted longer (a few days) than those within the topsoil.</p>
+									<hr />
+														
+									<h3>Final Prototype & Results</h3>
+									<p>The final protoype designed is displayed below, I laser cut a piece of wood to attach some of my electrical components to for ease of use. Although my material costs were above the purchase value of the AeroGrow system which I tore down initially, the cost of the materials incorporated within my design totalled out to just over $40 ($41.25) assuming $8 for filament costs and $3 for growth medium usage.</p>
+									<div class="box alt">
+										<div class="row gtr-uniform">
+											<div class="col-3"; style="width:image width px; font-size:80%; text-align:center;"><span class="image fit"><img src="photos/ME391/FinalTop.jpg" alt="" style="padding-bottom:0.5em;"/><i>Angular Prototype View</i></span></div>
+											<div class="col-3"; style="width:image width px; font-size:80%; text-align:center;"><span class="image fit"><img src="photos/ME391/FinalFront.jpg" alt="" style="padding-bottom:0.5em;"/><i>Front View</i></span></div>
+											<div class="col-4"; style="width:image width px; font-size:80%; text-align:center;"><span class="image fit"><img src="photos/ME391/FinalBack.jpg" alt="" style="padding-bottom:0.5em;"/><i>Electronic Wiring View</i></span></div>
+										</div>
+									</div>
+									<p>Over the summer I used the system to grow a pepper plant (I forgot my lettuce seeds) which quickly outgrew the design. I made a few shifts to my prototype in using a polycarbonate tank instead of one made from PLA Filament due to water leakage, and I removed the light system after a couple weeks due to the leaves of the plant becoming too big. Also attached is the status of the plant before I returned to campus.</p>
+									<div class="box alt">
+										<div class="row gtr-uniform">
+											<div class="col-4"; style="width:image width px; font-size:80%; text-align:center;"><span class="image fit"><img src="photos/ME391/BabyRoots.jpg" alt="" style="padding-bottom:0.5em;"/><i>2 weeks</i></span></div>
+											<div class="col-4"; style="width:image width px; font-size:80%; text-align:center;"><span class="image fit"><img src="photos/ME391/TeenTop.jpg" alt="" style="padding-bottom:0.5em;"/><i>5 weeks</i></span></div>
+											<div class="col-4"; style="width:image width px; font-size:80%; text-align:center;"><span class="image fit"><img src="photos/ME391/AdultSide.jpg" alt="" style="padding-bottom:0.5em;"/><i>8 weeks (peep the flowering!)</i></span></div>
+										</div>
+									</div>
 								</div>
+								<hr />
+								<div class="box">
+									<h3>Next Steps</h3>
+									<p>I made the system work with my initial design, however in terms of practicality it is not the best. My next goal with this project is making it so that its design is more autonomous, and has added customizability. With my initial design, I had difficulties managing the light code as I obtained it from an open source, so I want to create my own PWM code so that I can run the lights on a day night cycle with Arduino instead of an on off method. Secondly, I want to change the design so that it is something that can be attached to an existing pot. This idea was curtousey of my mother wanting to use hydroponics, but wanting the design to fit with the decorations around our home. Finally, I want to re-design the heat sink, as it was the limiting factor of my initial design which lead to the shape being fairly angular, however in terms of aesthetics I would prefer to have a more curved design so that it is more appealing to the eye. </p>
+								</div>
+							</div>	
+								
 							</section>
 
 					</div>
@@ -124,6 +286,10 @@
 								<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
 								<li><a href="#" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
 							</ul>-->
+							<ul class="actions fit">
+                                <li><a href="projects.html" class="button primary fit">Return to Projects</a></li>
+                                <li><a href="home.html" class="button fit">Return Home</a></li>
+                            </ul>
 							<ul class="copyright">
 								<li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
 							</ul>
